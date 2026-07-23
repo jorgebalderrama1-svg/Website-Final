@@ -32,6 +32,7 @@ import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
 import heroSkyline from "@/assets/hero-skyline.jpg";
+import logoAsset from "@/assets/sa-tax-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -109,15 +110,21 @@ function Nav() {
       }`}
     >
       <div className="container-x flex h-16 items-center justify-between md:h-20">
-        <a href="#top" className="flex items-center gap-2.5 min-w-0">
-          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-navy-gradient">
-            <span className="font-display text-primary-foreground text-lg leading-none">SA</span>
+        <a href="#top" className="flex items-center gap-3 min-w-0">
+          <div className={`grid h-11 w-11 shrink-0 place-items-center rounded-sm transition-colors ${scrolled ? "bg-transparent" : "bg-white/95"}`}>
+            <img
+              src={logoAsset.url}
+              alt="SA Tax Consultants LLC logo"
+              className="h-9 w-9 object-contain"
+              width={44}
+              height={44}
+            />
           </div>
           <div className="flex flex-col leading-tight min-w-0">
-            <span className="font-display text-[15px] md:text-base text-ink truncate">
+            <span className={`font-display text-[15px] md:text-base truncate transition-colors ${scrolled ? "text-ink" : "text-white"}`}>
               SA Tax Consulting
             </span>
-            <span className="text-[10px] tracking-[0.18em] uppercase text-muted-foreground">
+            <span className={`text-[10px] tracking-[0.18em] uppercase transition-colors ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>
               Texas Sales Tax Advisors
             </span>
           </div>
@@ -794,9 +801,13 @@ function Footer() {
     <footer className="bg-background border-t border-border py-12">
       <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 sm:flex sm:justify-between">
         <div className="flex items-center gap-3 min-w-0">
-          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-navy-gradient">
-            <span className="font-display text-primary-foreground text-lg leading-none">SA</span>
-          </div>
+          <img
+            src={logoAsset.url}
+            alt="SA Tax Consultants LLC logo"
+            className="h-10 w-10 shrink-0 object-contain"
+            width={40}
+            height={40}
+          />
           <div className="text-sm text-muted-foreground truncate">
             © {new Date().getFullYear()} SA Tax Consulting LLC · All rights reserved.
           </div>
