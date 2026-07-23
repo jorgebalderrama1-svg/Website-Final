@@ -814,13 +814,15 @@ function Footer() {
     <footer className="bg-background border-t border-border py-12">
       <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 sm:flex sm:justify-between">
         <div className="flex items-center gap-3 min-w-0">
-          <img
-            src={logoAsset.url}
-            alt="SA Tax Consultants LLC logo"
-            className="h-10 w-10 shrink-0 object-contain"
-            width={40}
-            height={40}
-          />
+          <div className="grid h-11 w-11 shrink-0 place-items-center rounded-sm bg-navy-gradient">
+            <img
+              src={logoAsset.url}
+              alt="SA Tax Consultants LLC logo"
+              className="h-9 w-9 object-contain"
+              width={36}
+              height={36}
+            />
+          </div>
           <div className="text-sm text-muted-foreground truncate">
             © {new Date().getFullYear()} SA Tax Consulting LLC · All rights reserved.
           </div>
