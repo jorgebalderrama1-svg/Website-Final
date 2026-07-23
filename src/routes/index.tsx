@@ -32,6 +32,7 @@ import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
 import heroSkyline from "@/assets/hero-skyline.jpg";
+import logoLarge from "@/assets/sa-tax-logo-large.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
