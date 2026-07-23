@@ -32,7 +32,6 @@ import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
 import heroSkyline from "@/assets/hero-skyline.jpg";
-import logoAsset from "@/assets/sa-tax-logo-white.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -110,24 +109,13 @@ function Nav() {
       }`}
     >
       <div className="container-x flex h-16 items-center justify-between md:h-20">
-        <a href="#top" className="flex items-center gap-3 min-w-0">
-          <div className={`grid h-11 w-11 shrink-0 place-items-center rounded-sm transition-colors ${scrolled ? "bg-navy" : "bg-transparent"}`}>
-            <img
-              src={logoAsset.url}
-              alt="SA Tax Consultants LLC logo"
-              className="h-9 w-9 object-contain"
-              width={44}
-              height={44}
-            />
-          </div>
-          <div className="flex flex-col leading-tight min-w-0">
-            <span className={`font-display text-[15px] md:text-base truncate transition-colors ${scrolled ? "text-ink" : "text-white"}`}>
-              SA Tax Consulting
-            </span>
-            <span className={`text-[10px] tracking-[0.18em] uppercase transition-colors ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>
-              Texas Sales Tax Advisors
-            </span>
-          </div>
+        <a href="#top" className="flex flex-col leading-tight min-w-0">
+          <span className={`font-display text-[15px] md:text-base truncate transition-colors ${scrolled ? "text-ink" : "text-white"}`}>
+            SA Tax Consulting
+          </span>
+          <span className={`text-[10px] tracking-[0.18em] uppercase transition-colors ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>
+            Texas Sales Tax Advisors
+          </span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-9">
@@ -204,36 +192,26 @@ function Hero() {
       <Nav />
 
       <div className="container-x relative z-10 flex min-h-screen flex-col justify-center pt-32 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-12 lg:gap-16 items-center">
-          <div className="max-w-3xl">
-            <div className="reveal inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-blue-light animate-pulse" />
-              <span className="text-[11px] tracking-[0.2em] uppercase text-white/80">
-                Led by former Texas Comptroller auditors
-              </span>
-            </div>
-
-            <h1 className="reveal reveal-delay-1 mt-8 text-[42px] leading-[1.02] sm:text-6xl md:text-7xl lg:text-[88px] text-white">
-              Texas sales tax,
-              <br />
-              <span className="italic text-gradient-blue">defended with precision.</span>
-            </h1>
-
-            <p className="reveal reveal-delay-2 mt-8 max-w-2xl text-base md:text-lg text-white/70 leading-relaxed">
-              SA Tax Consulting represents Texas businesses through audits, appeals, and compliance
-              reviews. Our team of former Comptroller sales tax auditors and supervisors knows the
-              process from the inside — and we use that experience to reduce your liability and
-              protect your operations.
-            </p>
+        <div className="max-w-3xl">
+          <div className="reveal inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-brand-blue-light animate-pulse" />
+            <span className="text-[11px] tracking-[0.2em] uppercase text-white/80">
+              Led by former Texas Comptroller auditors
+            </span>
           </div>
 
-          <div className="reveal reveal-delay-2 hidden lg:flex justify-center items-center">
-            <img
-              src={logoAsset.url}
-              alt="SA Tax Consultants LLC — Alamo shield emblem"
-              className="w-[420px] xl:w-[500px] h-auto drop-shadow-[0_20px_60px_rgba(96,165,250,0.25)]"
-            />
-          </div>
+          <h1 className="reveal reveal-delay-1 mt-8 text-[42px] leading-[1.02] sm:text-6xl md:text-7xl lg:text-[88px] text-white">
+            Texas sales tax,
+            <br />
+            <span className="italic text-gradient-blue">defended with precision.</span>
+          </h1>
+
+          <p className="reveal reveal-delay-2 mt-8 max-w-2xl text-base md:text-lg text-white/70 leading-relaxed">
+            SA Tax Consulting represents Texas businesses through audits, appeals, and compliance
+            reviews. Our team of former Comptroller sales tax auditors and supervisors knows the
+            process from the inside — and we use that experience to reduce your liability and
+            protect your operations.
+          </p>
         </div>
 
         <div className="max-w-3xl">
@@ -813,19 +791,8 @@ function Footer() {
   return (
     <footer className="bg-background border-t border-border py-12">
       <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 sm:flex sm:justify-between">
-        <div className="flex items-center gap-3 min-w-0">
-          <div className="grid h-11 w-11 shrink-0 place-items-center rounded-sm bg-navy-gradient">
-            <img
-              src={logoAsset.url}
-              alt="SA Tax Consultants LLC logo"
-              className="h-9 w-9 object-contain"
-              width={36}
-              height={36}
-            />
-          </div>
-          <div className="text-sm text-muted-foreground truncate">
-            © {new Date().getFullYear()} SA Tax Consulting LLC · All rights reserved.
-          </div>
+        <div className="text-sm text-muted-foreground truncate">
+          © {new Date().getFullYear()} SA Tax Consulting LLC · All rights reserved.
         </div>
         <div className="text-xs text-muted-foreground tracking-wider uppercase shrink-0">
           Austin · Texas
