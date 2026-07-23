@@ -32,7 +32,7 @@ import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
 import heroSkyline from "@/assets/hero-skyline.jpg";
-import logoLarge from "@/assets/sa-tax-logo-large.png.asset.json";
+import logoHero from "@/assets/sa-tax-logo-hero.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -196,7 +196,7 @@ function Hero() {
         <div className="max-w-3xl">
           <div className="reveal mb-10">
             <img
-              src={logoLarge.url}
+              src={logoHero.url}
               alt="SA Tax Consultants LLC — Alamo shield emblem"
               width={900}
               height={900}
