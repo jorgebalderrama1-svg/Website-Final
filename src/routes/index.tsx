@@ -194,20 +194,30 @@ function Hero() {
 
       <div className="container-x relative z-10 flex min-h-screen flex-col justify-center pt-32 pb-24">
         <div className="max-w-3xl">
-          <div className="reveal inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
+          <div className="reveal mb-10">
+            <img
+              src={logoLarge.url}
+              alt="SA Tax Consultants LLC — Alamo shield emblem"
+              width={900}
+              height={900}
+              className="mx-auto w-full max-w-[280px] sm:max-w-[340px] md:max-w-[420px] lg:max-w-[520px] h-auto drop-shadow-[0_20px_60px_rgba(96,165,250,0.25)]"
+            />
+          </div>
+
+          <div className="reveal reveal-delay-1 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-blue-light animate-pulse" />
             <span className="text-[11px] tracking-[0.2em] uppercase text-white/80">
               Led by former Texas Comptroller auditors
             </span>
           </div>
 
-          <h1 className="reveal reveal-delay-1 mt-8 text-[42px] leading-[1.02] sm:text-6xl md:text-7xl lg:text-[88px] text-white">
+          <h1 className="reveal reveal-delay-2 mt-8 text-[42px] leading-[1.02] sm:text-6xl md:text-7xl lg:text-[88px] text-white">
             Texas sales tax,
             <br />
             <span className="italic text-gradient-blue">defended with precision.</span>
           </h1>
 
-          <p className="reveal reveal-delay-2 mt-8 max-w-2xl text-base md:text-lg text-white/70 leading-relaxed">
+          <p className="reveal reveal-delay-3 mt-8 max-w-2xl text-base md:text-lg text-white/70 leading-relaxed">
             SA Tax Consulting represents Texas businesses through audits, appeals, and compliance
             reviews. Our team of former Comptroller sales tax auditors and supervisors knows the
             process from the inside — and we use that experience to reduce your liability and
