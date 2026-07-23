@@ -375,6 +375,15 @@ function About() {
     <section id="about" className="py-24 md:py-36 bg-navy-deep text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,oklch(0.5_0.17_255/0.15),transparent_60%)]" />
       <div className="container-x relative">
+        <div className="reveal flex justify-center mb-16 md:mb-20">
+          <img
+            src={logoLarge.url}
+            alt="SA Tax Consultants LLC — Alamo shield emblem"
+            width={1200}
+            height={800}
+            className="w-full max-w-[720px] lg:max-w-[900px] h-auto"
+          />
+        </div>
         <div ref={ref} className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-16 lg:gap-24 items-start">
           <div>
             <div className="flex items-center gap-4 mb-6">
