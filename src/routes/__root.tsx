@@ -81,10 +81,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "SA Tax Consulting LLC" },
       { name: "twitter:card", content: "summary_large_image" },
+      { title: "SA Tax Consulting LLC — Texas Sales Tax Audit Defense & Advisory" },
+      { property: "og:title", content: "SA Tax Consulting LLC — Texas Sales Tax Audit Defense & Advisory" },
+      { name: "twitter:title", content: "SA Tax Consulting LLC — Texas Sales Tax Audit Defense & Advisory" },
+      { name: "description", content: "Former Texas Comptroller auditors defending businesses in sales tax audits, appeals, compliance reviews, and liability reduction across Texas." },
+      { property: "og:description", content: "Former Texas Comptroller auditors defending businesses in sales tax audits, appeals, compliance reviews, and liability reduction across Texas." },
+      { name: "twitter:description", content: "Former Texas Comptroller auditors defending businesses in sales tax audits, appeals, compliance reviews, and liability reduction across Texas." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0ba041a7-4a34-4ffe-aa87-bfcaa7113753/id-preview-a0775547--c85228fc-9a6a-4f65-baee-0f05dd555ea7.lovable.app-1784823845010.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0ba041a7-4a34-4ffe-aa87-bfcaa7113753/id-preview-a0775547--c85228fc-9a6a-4f65-baee-0f05dd555ea7.lovable.app-1784823845010.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

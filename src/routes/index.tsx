@@ -44,12 +44,12 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "SA Tax Consulting LLC — Texas Sales Tax Audit Defense",
+        content: "SA Tax Consulting LLC — Texas Sales Tax Audit Defense & Advisory",
       },
       {
         property: "og:description",
         content:
-          "Led by former Texas Comptroller sales tax auditors. Audit defense, liability reduction, compliance, and administrative appeals.",
+          "Former Texas Comptroller auditors defending businesses in sales tax audits, appeals, compliance reviews, and liability reduction across Texas.",
       },
       { property: "og:url", content: "/" },
     ],
