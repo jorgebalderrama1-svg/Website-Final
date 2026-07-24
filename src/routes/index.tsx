@@ -686,8 +686,8 @@ function Contact() {
                 <Mail className="h-5 w-5 text-brand-blue-light mt-0.5 shrink-0" />
                 <div>
                   <div className="text-sm text-white/50 uppercase tracking-wider">Email</div>
-                  <a href="mailto:info@sataxconsulting.com" className="text-white hover:text-brand-blue-light transition-colors">
-                    info@sataxconsulting.com
+                  <a href="mailto:consulting@sataxdefense.com" className="text-white hover:text-brand-blue-light transition-colors">
+                    consulting@sataxdefense.com
                   </a>
                 </div>
               </div>
@@ -704,7 +704,7 @@ function Contact() {
                 <MapPin className="h-5 w-5 text-brand-blue-light mt-0.5 shrink-0" />
                 <div>
                   <div className="text-sm text-white/50 uppercase tracking-wider">Office</div>
-                  <div className="text-white">Austin, Texas · Statewide representation</div>
+                  <div className="text-white">San Antonio, Texas · Statewide representation</div>
                 </div>
               </div>
             </div>
@@ -806,7 +806,7 @@ function Footer() {
           © {new Date().getFullYear()} SA Tax Consulting LLC · All rights reserved.
         </div>
         <div className="text-xs text-muted-foreground tracking-wider uppercase shrink-0">
-          Austin · Texas
+          San Antonio · Texas
         </div>
       </div>
     </footer>
