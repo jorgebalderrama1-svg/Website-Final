@@ -200,7 +200,7 @@ function Hero() {
               alt="SA Tax Consultants LLC — Alamo shield emblem"
               width={900}
               height={900}
-              className="mx-auto w-full max-w-[280px] sm:max-w-[340px] md:max-w-[420px] lg:max-w-[520px] h-auto invert drop-shadow-[0_20px_60px_rgba(96,165,250,0.25)]"
+              className="mx-auto w-full max-w-[280px] sm:max-w-[340px] md:max-w-[420px] lg:max-w-[520px] h-auto drop-shadow-[0_20px_60px_rgba(96,165,250,0.25)]"
             />
           </div>
 
