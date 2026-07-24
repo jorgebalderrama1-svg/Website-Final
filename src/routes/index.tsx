@@ -665,11 +665,17 @@ function Contact() {
         },
       });
       
+      const payload = await response.json().catch(() => ({} as any));
+
       if (response.ok) {
         form.reset();
         toast.success("Message received", {
           description: "A partner will contact you within one business day.",
         });
+        // Redirect to local thank-you page if available, otherwise fall back to Formspree's next
+        const next = (payload && payload.next) ? payload.next : "/thanks";
+        // If payload.next is an absolute or Formspree path, prefer local /thanks
+        window.location.href = next === "/thanks" ? "/thanks" : "/thanks";
       } else {
         toast.error("Failed to send message", {
           description: "Please try again or contact us directly.",
