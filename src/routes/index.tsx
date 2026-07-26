@@ -21,6 +21,12 @@ import {
   Quote,
   Plus,
   Minus,
+  Wine,
+  Home,
+  Zap,
+  DollarSign,
+  Warehouse,
+  Hammer,
 } from "lucide-react";
 import {
   Accordion,
@@ -306,6 +312,60 @@ const services = [
     desc: "Redetermination hearings, statement of grounds preparation, and negotiation with Comptroller hearings attorneys to resolve disputes before litigation.",
     points: ["Hearings representation", "Statement of grounds", "Settlement negotiation"],
   },
+  {
+    icon: DollarSign,
+    title: "Sales Tax Audits",
+    desc: "Comprehensive defense for standard sales tax audits across all business types. We've helped hundreds of Texas businesses navigate Comptroller audits and reduce assessments.",
+    points: ["Full audit representation", "Tax position defense", "Appeal management"],
+  },
+  {
+    icon: Wine,
+    title: "Mixed Beverage Tax",
+    desc: "Specialized audits and appeals for beverage operations subject to mixed beverage gross receipts tax. We understand the unique nexus, classification, and exemption issues.",
+    points: ["Beverage classification", "Exempt sale defense", "Assessment challenges"],
+  },
+  {
+    icon: Home,
+    title: "Hotel & Lodging Tax",
+    desc: "Defense for hospitality businesses facing hotel occupancy tax audits. From nexus issues to occupancy determination, we protect your revenue.",
+    points: ["Occupancy determination", "Exemption analysis", "Collection defense"],
+  },
+  {
+    icon: Warehouse,
+    title: "Enterprise Zone Benefits",
+    desc: "Strategic guidance and audit defense for businesses utilizing Enterprise Zone tax incentives. Ensure proper documentation and maximum benefit preservation.",
+    points: ["Zone certification review", "Benefit documentation", "Audit representation"],
+  },
+  {
+    icon: ShoppingBag,
+    title: "Convenience Store Audits",
+    desc: "Targeted expertise for convenience store chains and independent operators. We navigate the complex taxability issues unique to retail fuel and merchandise sales.",
+    points: ["Fuel vs. merchandise", "Packaging classification", "Multi-location nexus"],
+  },
+  {
+    icon: Wrench,
+    title: "Oil & Gas Services Tax",
+    desc: "Specialized audits and compliance support for oilfield service companies. We address the distinct tax classification and exemption questions in energy industries.",
+    points: ["Service classification", "Exemption documentation", "Audit negotiation"],
+  },
+  {
+    icon: Factory,
+    title: "Manufacturing Tax Defense",
+    desc: "Defense for manufacturers facing sales tax audits. From component sourcing to equipment classification, we challenge complex audit determinations.",
+    points: ["Input tax analysis", "Equipment exemptions", "Material classification"],
+  },
+  {
+    icon: Hammer,
+    title: "Construction & Contractor Audits",
+    desc: "Comprehensive representation for contractors, subcontractors, and construction companies. We defend against audits challenging labor, materials, and service classifications.",
+    points: ["Labor vs. materials", "Resale exemptions", "Subcontractor issues"],
+  },
+  {
+    icon: TrendingDown,
+    title: "Refunds & Credits",
+    desc: "Proactive identification and recovery of overpaid sales taxes through amended returns and refund claims. We've recovered millions for clients on unclaimed exemptions and misclassifications.",
+    points: ["Overpayment recovery", "Amended returns", "Refund documentation"],
+  },
 ];
 
 function Services() {
@@ -321,14 +381,12 @@ function Services() {
           </div>
           <div className="flex items-center">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Every engagement is led by professionals who have sat on the auditor's side of the
-              table. That perspective shapes how we prepare records, frame arguments, and resolve
-              disputes — quietly, and in your favor.
+              From standard sales tax to specialized audits in hospitality, energy, retail, and construction — we handle the full spectrum. Our expertise spans mixed beverage tax, hotel occupancy, enterprise zone benefits, and refund recovery. Every engagement is led by professionals who have sat on the auditor's side of the table.
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border rounded-sm overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-sm overflow-hidden">
           {services.map((s, i) => {
             const Icon = s.icon;
             return (
