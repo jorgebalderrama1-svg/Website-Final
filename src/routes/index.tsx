@@ -726,8 +726,8 @@ function Contact() {
                 <Phone className="h-5 w-5 text-brand-blue-light mt-0.5 shrink-0" />
                 <div>
                   <div className="text-sm text-white/50 uppercase tracking-wider">Phone</div>
-                  <a href="tel:+15125550100" className="text-white hover:text-brand-blue-light transition-colors">
-                    (512) 555-0100
+                  <a href="tel:+12108603614" className="text-white hover:text-brand-blue-light transition-colors">
+                    (210) 860-3614
                   </a>
                 </div>
               </div>
@@ -735,7 +735,7 @@ function Contact() {
                 <MapPin className="h-5 w-5 text-brand-blue-light mt-0.5 shrink-0" />
                 <div>
                   <div className="text-sm text-white/50 uppercase tracking-wider">Office</div>
-                  <div className="text-white">Austin, Texas · Statewide representation</div>
+                  <div className="text-white">San Antonio, Texas · Statewide representation</div>
                 </div>
               </div>
             </div>
@@ -837,7 +837,7 @@ function Footer() {
           © {new Date().getFullYear()} SA Tax Consulting LLC · All rights reserved.
         </div>
         <div className="text-xs text-muted-foreground tracking-wider uppercase shrink-0">
-          Austin · Texas
+          San Antonio · Texas
         </div>
       </div>
     </footer>
