@@ -234,6 +234,11 @@ function Hero() {
             process from the inside — and we use that experience to reduce your liability and
             protect your operations.
           </p>
+
+          <div className="mt-4 text-white font-semibold">
+            Proudly based in San Antonio — local, accessible tax representation with rapid on-site
+            support for Texas businesses. Work with a team who knows the local community and courts.
+          </div>
         </div>
 
         <div className="max-w-3xl">
@@ -243,7 +248,7 @@ function Hero() {
               href="#contact"
               className="group inline-flex items-center gap-3 rounded-sm bg-white px-6 py-3.5 text-sm font-medium text-navy-deep hover:bg-brand-blue-light transition-colors"
             >
-              Schedule a confidential review
+              Schedule a free initial consultation
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
