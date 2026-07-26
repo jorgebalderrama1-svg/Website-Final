@@ -132,6 +132,16 @@ function Nav() {
         </nav>
 
         <div className="flex items-center gap-3">
+          {/* Call button: uses tel: so mobile devices (iOS/Android) open the phone dialer */}
+          <a
+            href="tel:+12108603614"
+            aria-label="Call SA Tax Consulting"
+            className="inline-flex items-center gap-2 rounded-sm bg-emerald-600 px-3 py-2.5 text-sm text-white hover:bg-emerald-700 transition-colors"
+          >
+            <Phone className="h-4 w-4" />
+            Call
+          </a>
+
           <a
             href="#contact"
             className="hidden md:inline-flex items-center gap-2 rounded-sm bg-navy px-4 py-2.5 text-sm text-primary-foreground hover:bg-navy-deep transition-colors"
@@ -139,6 +149,7 @@ function Nav() {
             Request consultation
             <ArrowRight className="h-4 w-4" />
           </a>
+
           <button
             onClick={() => setOpen(!open)}
             className="lg:hidden grid h-10 w-10 place-items-center rounded-sm border border-border"
