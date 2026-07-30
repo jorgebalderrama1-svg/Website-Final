@@ -138,6 +138,16 @@ function Nav() {
         </nav>
 
         <div className="flex items-center gap-3">
+          {/* Call button: uses tel: so mobile devices (iOS/Android) open the phone dialer */}
+          <a
+            href="tel:+12108603614"
+            aria-label="Call SA Tax Consulting"
+            className="inline-flex items-center gap-2 rounded-sm bg-emerald-600 px-3 py-2.5 text-sm text-white hover:bg-emerald-700 transition-colors"
+          >
+            <Phone className="h-4 w-4" />
+            Call
+          </a>
+
           <a
             href="#contact"
             className="hidden md:inline-flex items-center gap-2 rounded-sm bg-navy px-4 py-2.5 text-sm text-primary-foreground hover:bg-navy-deep transition-colors"
@@ -145,6 +155,7 @@ function Nav() {
             Request consultation
             <ArrowRight className="h-4 w-4" />
           </a>
+
           <button
             onClick={() => setOpen(!open)}
             className="lg:hidden grid h-10 w-10 place-items-center rounded-sm border border-border"
@@ -229,6 +240,11 @@ function Hero() {
             process from the inside — and we use that experience to reduce your liability and
             protect your operations.
           </p>
+
+          <div className="mt-4 text-white font-semibold">
+            Proudly based in San Antonio — local, accessible tax representation with rapid on-site
+            support for Texas businesses. Work with a team who knows the local community and courts.
+          </div>
         </div>
 
         <div className="max-w-3xl">
@@ -238,7 +254,7 @@ function Hero() {
               href="#contact"
               className="group inline-flex items-center gap-3 rounded-sm bg-white px-6 py-3.5 text-sm font-medium text-navy-deep hover:bg-brand-blue-light transition-colors"
             >
-              Schedule a confidential review
+              Schedule a free initial consultation
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
