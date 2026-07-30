@@ -43,7 +43,7 @@ import logoHero from "@/assets/sa-tax-logo-hero.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SA Tax Consulting LLC — Texas Sales Tax Audit Defense & Advisory" },
+      { title: "SA Tax Consultants LLC — Texas Sales Tax Audit Defense & Advisory" },
       {
         name: "description",
         content:
@@ -51,7 +51,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "SA Tax Consulting LLC — Texas Sales Tax Audit Defense & Advisory",
+        content: "SA Tax Consultants LLC — Texas Sales Tax Audit Defense & Advisory",
       },
       {
         property: "og:description",
@@ -118,7 +118,7 @@ function Nav() {
       <div className="container-x flex h-16 items-center justify-between md:h-20">
         <a href="#top" className="flex flex-col leading-tight min-w-0">
           <span className={`font-display text-[15px] md:text-base truncate transition-colors ${scrolled ? "text-ink" : "text-white"}`}>
-            SA Tax Consulting
+            SA Tax Consultants LLC
           </span>
           <span className={`text-[10px] tracking-[0.18em] uppercase transition-colors ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>
             Texas Sales Tax Advisors
@@ -141,7 +141,7 @@ function Nav() {
           {/* Call button: uses tel: so mobile devices (iOS/Android) open the phone dialer */}
           <a
             href="tel:+12108603614"
-            aria-label="Call SA Tax Consulting"
+            aria-label="Call SA Tax Consultants LLC"
             className="inline-flex items-center gap-2 rounded-sm bg-emerald-600 px-3 py-2.5 text-sm text-white hover:bg-emerald-700 transition-colors"
           >
             <Phone className="h-4 w-4" />
@@ -235,7 +235,7 @@ function Hero() {
           </h1>
 
           <p className="reveal reveal-delay-3 mt-8 max-w-2xl text-base md:text-lg text-white/70 leading-relaxed">
-            SA Tax Consulting represents Texas businesses through audits, appeals, and compliance
+            SA Tax Consultants LLC represents Texas businesses through audits, appeals, and compliance
             reviews. Our team of former Comptroller sales tax auditors and supervisors knows the
             process from the inside — and we use that experience to reduce your liability and
             protect your operations.
@@ -476,7 +476,7 @@ function About() {
           </div>
           <div className="space-y-6 text-white/75 leading-relaxed text-lg">
             <p>
-              SA Tax Consulting was founded by veterans of the Texas Comptroller of Public
+              SA Tax Consultants LLC was founded by veterans of the Texas Comptroller of Public
               Accounts — sales tax auditors and supervisors who spent decades enforcing the
               statute they now help clients navigate.
             </p>
@@ -578,7 +578,8 @@ const testimonials = [
   },
   {
     quote:
-      "SA Tax Consulting managed the entire audit while we ran the business. Professional, discreet, and exceptionally effective.",
+      "SA Tax Consultants managed the entire audit while we ran the business. Professional, discreet, and exceptionally effective.",
+
     author: "Owner",
     company: "Multi-location restaurant operator",
   },
@@ -908,7 +909,7 @@ function Footer() {
     <footer className="bg-background border-t border-border py-12">
       <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 sm:flex sm:justify-between">
         <div className="text-sm text-muted-foreground truncate">
-          © {new Date().getFullYear()} SA Tax Consulting LLC · All rights reserved.
+          © {new Date().getFullYear()} SA Tax Consultants LLC · All rights reserved.
         </div>
         <div className="text-xs text-muted-foreground tracking-wider uppercase shrink-0">
           San Antonio · Texas
