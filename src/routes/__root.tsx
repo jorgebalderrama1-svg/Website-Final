@@ -77,13 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "author", content: "SA Tax Consultants LLC" },
+      { name: "author", content: "SA Tax & Audit Consultants LLC" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "SA Tax Consultants LLC" },
+      { property: "og:site_name", content: "SA Tax & Audit Consultants LLC" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "SA Tax Consultants LLC — Texas Sales Tax Audit Defense & Advisory" },
-      { property: "og:title", content: "SA Tax Consultants LLC — Texas Sales Tax Audit Defense & Advisory" },
-      { name: "twitter:title", content: "SA Tax Consultants LLC — Texas Sales Tax Audit Defense & Advisory" },
+      { title: "SA Tax & Audit Consultants LLC — Texas Sales Tax Audit Defense & Advisory" },
+      { property: "og:title", content: "SA Tax & Audit Consultants LLC — Texas Sales Tax Audit Defense & Advisory" },
+      { name: "twitter:title", content: "SA Tax & Audit Consultants LLC — Texas Sales Tax Audit Defense & Advisory" },
       { name: "description", content: "Former Texas Comptroller auditors defending businesses in sales tax audits, appeals, compliance reviews, and liability reduction across Texas." },
       { property: "og:description", content: "Former Texas Comptroller auditors defending businesses in sales tax audits, appeals, compliance reviews, and liability reduction across Texas." },
       { name: "twitter:description", content: "Former Texas Comptroller auditors defending businesses in sales tax audits, appeals, compliance reviews, and liability reduction across Texas." },
@@ -105,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
-          name: "SA Tax Consultants LLC",
+          name: "SA Tax & Audit Consultants LLC",
           description:
             "Texas sales tax consulting firm specializing in audit defense, liability reduction, compliance reviews, and administrative appeals.",
           areaServed: "Texas",
