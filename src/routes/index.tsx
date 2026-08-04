@@ -792,8 +792,8 @@ function Contact() {
                 <Mail className="h-5 w-5 text-brand-blue-light mt-0.5 shrink-0" />
                 <div>
                   <div className="text-sm text-white/50 uppercase tracking-wider">Email</div>
-                  <a href="mailto:info@sataxconsulting.com" className="text-white hover:text-brand-blue-light transition-colors">
-                    info@sataxconsulting.com
+                  <a href="mailto:info@sataxdefense.com" className="text-white hover:text-brand-blue-light transition-colors">
+                    info@sataxdefense.com
                   </a>
                 </div>
               </div>
