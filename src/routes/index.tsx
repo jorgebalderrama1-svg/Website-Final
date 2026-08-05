@@ -907,6 +907,12 @@ function Footer() {
           San Antonio · Texas
         </div>
       </div>
+
+      <div className="container-x mt-6">
+        <p className="text-[11px] text-muted-foreground leading-snug">
+          Consultant does not guarantee any audit outcome, assessment, settlement, refund, or penalty or interest reduction; opinions expressed are professional judgments, not guarantees, and outcomes depend on the accuracy of Client&apos;s records, the Comptroller&apos;s determinations, and the hours funded. Scope &amp; Changing Laws: advice is based solely on facts Client provides and the law in effect at the time of engagement; Consultant need not update its advice for later changes in law, policy, or facts. Prior State Employment: Consultant&apos;s marketing may reference personnel&apos;s prior employment with the Texas Comptroller; this creates no special relationship, influence, or guaranteed outcome
+        </p>
+      </div>
     </footer>
   );
 }
