@@ -243,7 +243,7 @@ function Hero() {
 
           <div className="mt-4 text-white font-semibold">
             Proudly based in San Antonio — local, accessible tax representation with rapid on-site
-            support for Texas businesses. Work with a team who knows the local community and courts.
+            support for Texas businesses. Get local representation from a team familiar with San Antonio's community and audit procedures.
           </div>
         </div>
 
