@@ -566,75 +566,6 @@ function IndustryCard({
   );
 }
 
-/* ---------------------- TESTIMONIALS ---------------------- */
-const testimonials = [
-  {
-    quote:
-      "SA Tax & Audit Consultants managed the entire audit while we ran the business. Professional, discreet, and exceptionally effective.",
-
-    author: "Owner",
-    company: "Multi-location restaurant operator",
-  },
-  {
-    quote:
-      "Their pre-audit compliance review saved us from a seven-figure exposure. Best money we've ever spent on tax advisory.",
-    author: "Controller",
-    company: "Oilfield services company",
-  },
-];
-
-function Testimonials() {
-  const [active, setActive] = useState(0);
-  const ref = useReveal<HTMLDivElement>();
-
-  return (
-    <section className="py-24 md:py-36 bg-surface-alt">
-      <div className="container-x">
-        <SectionEyebrow number="04" label="Client Voices" />
-        <div ref={ref} className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] gap-12 lg:gap-24 items-start">
-          <div>
-            <h2 className="text-4xl md:text-5xl text-ink leading-[1.05]">
-              Trusted by Texas businesses under pressure.
-            </h2>
-            <div className="mt-10 flex gap-2">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActive(i)}
-                  aria-label={`Testimonial ${i + 1}`}
-                  className={`h-1 transition-all ${
-                    active === i ? "w-12 bg-navy" : "w-6 bg-border"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="relative min-h-[280px]">
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className={`transition-all duration-700 ${
-                  active === i
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-4 absolute inset-0 pointer-events-none"
-                }`}
-              >
-                <Quote className="h-10 w-10 text-brand-blue/40 mb-6" />
-                <p className="font-display text-2xl md:text-3xl lg:text-4xl text-ink leading-[1.25]">
-                  "{t.quote}"
-                </p>
-                <div className="mt-8 pt-6 border-t border-border">
-                  <div className="text-sm font-medium text-ink">{t.author}</div>
-                  <div className="text-sm text-muted-foreground">{t.company}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ---------------------- FAQ ---------------------- */
 const faqs = [
@@ -925,7 +856,6 @@ function Landing() {
       <Services />
       <About />
       <Industries />
-      <Testimonials />
       <FAQ />
       <Contact />
       <Footer />
