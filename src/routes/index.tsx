@@ -660,7 +660,7 @@ const faqs = [
   },
   {
     q: "What does an engagement typically cost?",
-    a: "Fee structures depend on the engagement. We offer hourly, fixed-fee, and contingency arrangements. Initial consultations are complimentary and fully confidential.",
+    a: "Fee structures depend on the engagement. Initial consultations are complimentary and fully confidential. We can gladly meet at your place of business.",
   },
   {
     q: "Can you help after an assessment has been issued?",
