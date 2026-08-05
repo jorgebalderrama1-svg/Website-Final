@@ -268,8 +268,6 @@ function Hero() {
           <div className="reveal reveal-delay-4 mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-10 border-t border-white/10 pt-10 max-w-3xl">
             {[
               { k: "40+", v: "Years combined Comptroller experience" },
-              { k: "$50M+", v: "Client liability reduced" },
-              { k: "500+", v: "Audits defended" },
               { k: "Texas", v: "Statewide representation" },
             ].map((s) => (
               <div key={s.v}>
@@ -570,12 +568,6 @@ function IndustryCard({
 
 /* ---------------------- TESTIMONIALS ---------------------- */
 const testimonials = [
-  {
-    quote:
-      "They reduced our proposed assessment by more than 70%. The team's understanding of Comptroller sampling methodology was the difference.",
-    author: "CFO",
-    company: "Texas manufacturing group",
-  },
   {
     quote:
       "SA Tax & Audit Consultants managed the entire audit while we ran the business. Professional, discreet, and exceptionally effective.",
