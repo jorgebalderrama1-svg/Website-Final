@@ -18,12 +18,10 @@ import {
   Mail,
   Phone,
   MapPin,
-  Quote,
   Plus,
   Minus,
   Wine,
   Home,
-  Zap,
   DollarSign,
   Warehouse,
   Hammer,
@@ -40,10 +38,10 @@ import { Toaster } from "@/components/ui/sonner";
 import heroSkyline from "@/assets/hero-skyline.jpg";
 import logoHero from "@/assets/IMG_2556_rounded (1).png";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/espanol")({
   head: () => ({
     meta: [
-      { title: "SA Tax & Audit Consultants LLC — Texas Sales Tax Audit Defense & Advisory" },
+      { title: "SA Tax & Audit Consultants LLC — Texas sales tax defense and advisory" },
       {
         name: "description",
         content:
@@ -51,21 +49,20 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "SA Tax & Audit Consultants LLC — Texas Sales Tax Audit Defense & Advisory",
+        content: "SA Tax & Audit Consultants LLC — Texas sales tax defense and advisory",
       },
       {
         property: "og:description",
         content:
           "Former Texas Comptroller auditors defending businesses in sales tax audits, appeals, compliance reviews, and liability reduction across Texas.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "/espanol" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "/espanol" }],
   }),
-  component: Landing,
+  component: SpanishLanding,
 });
 
-/* ---------------------- Reveal on scroll ---------------------- */
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
   useEffect(() => {
@@ -88,7 +85,6 @@ function useReveal<T extends HTMLElement>() {
   return ref;
 }
 
-/* ---------------------- NAV ---------------------- */
 function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -100,11 +96,11 @@ function Nav() {
   }, []);
 
   const links = [
-    { href: "#services", label: "Services" },
-    { href: "#industries", label: "Industries" },
-    { href: "#about", label: "About" },
-    { href: "#faq", label: "FAQ" },
-    { href: "#contact", label: "Contact" },
+    { href: "#services", label: "Servicios" },
+    { href: "#industries", label: "Industrias" },
+    { href: "#about", label: "Nosotros" },
+    { href: "#faq", label: "Preguntas" },
+    { href: "#contact", label: "Contacto" },
   ];
 
   return (
@@ -121,7 +117,7 @@ function Nav() {
             SA Tax & Audit Consultants LLC
           </span>
           <span className={`text-[10px] tracking-[0.18em] uppercase transition-colors ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>
-            Texas Sales Tax Advisors
+            Asesores de impuesto sobre ventas en Texas
           </span>
         </a>
 
@@ -138,28 +134,20 @@ function Nav() {
         </nav>
 
         <div className="flex items-center gap-3">
-          {/* Call button: uses tel: so mobile devices (iOS/Android) open the phone dialer */}
           <a
             href="tel:+12108603614"
-            aria-label="Call SA Tax & Audit Consultants LLC"
+            aria-label="Llamar a SA Tax & Audit Consultants LLC"
             className="inline-flex items-center gap-2 rounded-sm bg-emerald-600 px-3 py-2.5 text-sm text-white hover:bg-emerald-700 transition-colors"
           >
             <Phone className="h-4 w-4" />
-            Call
-          </a>
-
-          <a
-            href="/espanol"
-            className="inline-flex items-center gap-2 rounded-sm bg-brand-blue px-3 py-2.5 text-sm text-white hover:bg-navy transition-colors"
-          >
-            Español
+            Llamar
           </a>
 
           <a
             href="#contact"
             className="hidden md:inline-flex items-center gap-2 rounded-sm bg-navy px-4 py-2.5 text-sm text-primary-foreground hover:bg-navy-deep transition-colors"
           >
-            Request consultation
+            Solicitar consulta
             <ArrowRight className="h-4 w-4" />
           </a>
 
@@ -191,7 +179,7 @@ function Nav() {
               onClick={() => setOpen(false)}
               className="mt-4 inline-flex items-center justify-center gap-2 rounded-sm bg-navy px-4 py-3 text-sm text-primary-foreground"
             >
-              Request consultation <ArrowRight className="h-4 w-4" />
+              Solicitar consulta <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -200,13 +188,12 @@ function Nav() {
   );
 }
 
-/* ---------------------- HERO ---------------------- */
 function Hero() {
   return (
     <section id="top" className="relative min-h-screen overflow-hidden bg-navy-deep">
       <img
         src={heroSkyline}
-        alt="Texas skyline at dusk"
+        alt="Horizonte de Texas al anochecer"
         width={1920}
         height={1280}
         className="absolute inset-0 h-full w-full object-cover opacity-40"
@@ -221,7 +208,7 @@ function Hero() {
           <div className="reveal mb-10">
             <img
               src={logoHero}
-              alt="SA Tax & Audit Consultants LLC — Alamo shield emblem"
+              alt="SA Tax & Audit Consultants LLC — emblema de escudo del Alamo"
               width={900}
               height={900}
               className="mx-auto w-full max-w-[280px] sm:max-w-[340px] md:max-w-[420px] lg:max-w-[520px] h-auto rounded-none border-0 bg-transparent drop-shadow-[0_20px_60px_rgba(96,165,250,0.25)]"
@@ -231,51 +218,49 @@ function Hero() {
           <div className="reveal reveal-delay-1 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-blue-light animate-pulse" />
             <span className="text-[11px] tracking-[0.2em] uppercase text-white/80">
-              Led by former Texas Comptroller auditors
+              Dirigido por ex auditores de la Texas Comptroller
             </span>
           </div>
 
           <h1 className="reveal reveal-delay-2 mt-8 text-[42px] leading-[1.02] sm:text-6xl md:text-7xl lg:text-[88px] text-white">
-            Texas sales tax,
+            Impuesto sobre ventas de Texas,
             <br />
-            <span className="italic text-gradient-blue">defended with precision.</span>
+            <span className="italic text-gradient-blue">defendido con precision.</span>
           </h1>
 
           <p className="reveal reveal-delay-3 mt-8 max-w-2xl text-base md:text-lg text-white/70 leading-relaxed">
-            SA Tax & Audit Consultants LLC represents Texas businesses through audits, appeals, and compliance
-            reviews. Our team of former Comptroller sales tax auditors and supervisors knows the
-            process from the inside — and we use that experience to reduce your liability and
-            protect your operations.
+            SA Tax & Audit Consultants LLC ayuda a empresas de Texas con auditorias de
+            sales tax, apelaciones y revisiones de cumplimiento. Nuestro equipo incluye ex
+            auditores y supervisores de la Texas Comptroller que conocen el proceso desde
+            adentro y lo usan para reducir la exposicion y proteger las operaciones.
           </p>
 
           <div className="mt-4 text-white font-semibold">
-            Proudly based in San Antonio — local, accessible tax representation with rapid on-site
-            support for Texas businesses. Get local representation from a team familiar with San Antonio's community and audit procedures.
+            Con orgullo en San Antonio. Apoyo local y directo para empresas de Texas.
           </div>
         </div>
 
         <div className="max-w-3xl">
-
           <div className="reveal reveal-delay-3 mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#contact"
               className="group inline-flex items-center gap-3 rounded-sm bg-white px-6 py-3.5 text-sm font-medium text-navy-deep hover:bg-brand-blue-light transition-colors"
             >
-              Schedule a free initial consultation
+              Agendar una consulta gratis
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#services"
               className="inline-flex items-center gap-2 px-2 py-3.5 text-sm text-white/90 hover:text-white transition-colors border-b border-white/30 hover:border-white"
             >
-              Explore our practice
+              Explorar nuestra practica
             </a>
           </div>
 
           <div className="reveal reveal-delay-4 mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-10 border-t border-white/10 pt-10 max-w-3xl">
             {[
-              { k: "40+", v: "Years combined Comptroller experience" },
-              { k: "Texas", v: "Statewide representation" },
+              { k: "40+", v: "Anos combinados de experiencia en la Contraloria" },
+              { k: "Texas", v: "Representacion en todo el estado" },
             ].map((s) => (
               <div key={s.v}>
                 <div className="font-display text-3xl md:text-4xl text-white">{s.k}</div>
@@ -293,7 +278,6 @@ function Hero() {
   );
 }
 
-/* ---------------------- SECTION HEADER ---------------------- */
 function SectionEyebrow({ number, label }: { number: string; label: string }) {
   const ref = useReveal<HTMLDivElement>();
   return (
@@ -307,85 +291,84 @@ function SectionEyebrow({ number, label }: { number: string; label: string }) {
   );
 }
 
-/* ---------------------- SERVICES ---------------------- */
 const services = [
   {
     icon: Shield,
-    title: "Audit Defense",
-    desc: "End-to-end representation from opening conference through final assessment. We manage records, negotiate sampling methodology, and challenge findings on the merits.",
-    points: ["Records management", "Sampling negotiation", "Assessment review"],
+    title: "Defensa de auditorias",
+    desc: "Representacion integral desde la conferencia inicial hasta la determinacion final. Gestionamos documentos, negociamos la metodologia de muestreo y cuestionamos hallazgos por sus meritos.",
+    points: ["Gestion de documentos", "Negociacion de muestreo", "Revision de determinaciones"],
   },
   {
     icon: TrendingDown,
-    title: "Liability Reduction",
-    desc: "Deep review of proposed assessments to identify overstated tax, misclassified transactions, and applicable exemptions that reduce your final liability.",
-    points: ["Transaction review", "Exemption analysis", "Refund identification"],
+    title: "Reduccion de responsabilidad",
+    desc: "Revision profunda de determinaciones propuestas para identificar impuestos sobreestimados, transacciones mal clasificadas y exenciones aplicables que reduzcan su responsabilidad final.",
+    points: ["Revision de transacciones", "Analisis de exenciones", "Identificacion de reembolsos"],
   },
   {
     icon: ScrollText,
-    title: "Compliance Reviews",
-    desc: "Proactive review of your systems, records, and taxability decisions before the state ever knocks. Identify exposure and fix it on your terms.",
-    points: ["Nexus analysis", "Taxability matrix", "Process remediation"],
+    title: "Revisiones de cumplimiento",
+    desc: "Revision proactiva de sus sistemas, registros y decisiones de tributacion antes de que el estado toque a su puerta. Identifique exposicion y corrjala en sus propios terminos.",
+    points: ["Analisis de nexus", "Matriz de tributacion", "Remediacion de procesos"],
   },
   {
     icon: Gavel,
-    title: "Administrative Appeals",
-    desc: "Redetermination hearings, statement of grounds preparation, and negotiation with Comptroller hearings attorneys to resolve disputes before litigation.",
-    points: ["Hearings representation", "Statement of grounds", "Settlement negotiation"],
+    title: "Apelaciones administrativas",
+    desc: "Audiencias de redeterminacion, preparacion de fundamentos y negociacion con abogados de audiencias de la Contraloria para resolver disputas antes de litigio.",
+    points: ["Representacion en audiencias", "Preparacion de fundamentos", "Negociacion de acuerdos"],
   },
   {
     icon: DollarSign,
-    title: "Sales Tax Audits",
-    desc: "Comprehensive defense for standard sales tax audits across all business types. We've helped hundreds of Texas businesses navigate Comptroller audits and reduce assessments.",
-    points: ["Full audit representation", "Tax position defense", "Appeal management"],
+    title: "Auditorias de impuesto sobre ventas",
+    desc: "Defensa integral para auditorias estandar de impuesto sobre ventas en todo tipo de empresas. Hemos ayudado a cientos de negocios de Texas a navegar auditorias de la Contraloria y reducir determinaciones.",
+    points: ["Representacion completa", "Defensa de posiciones fiscales", "Manejo de apelaciones"],
   },
   {
     icon: Wine,
-    title: "Mixed Beverage Tax",
-    desc: "Specialized audits and appeals for beverage operations subject to mixed beverage gross receipts tax. We understand the unique nexus, classification, and exemption issues.",
-    points: ["Beverage classification", "Exempt sale defense", "Assessment challenges"],
+    title: "Impuesto de bebidas mixtas",
+    desc: "Auditorias y apelaciones especializadas para operaciones sujetas al impuesto sobre ingresos brutos de bebidas mixtas. Entendemos los temas unicos de nexus, clasificacion y exenciones.",
+    points: ["Clasificacion de bebidas", "Defensa de ventas exentas", "Impugnacion de determinaciones"],
   },
   {
     icon: Home,
-    title: "Hotel & Lodging Tax",
-    desc: "Defense for hospitality businesses facing hotel occupancy tax audits. From nexus issues to occupancy determination, we protect your revenue.",
-    points: ["Occupancy determination", "Exemption analysis", "Collection defense"],
+    title: "Impuesto hotelero y de hospedaje",
+    desc: "Defensa para negocios de hospitalidad frente a auditorias del impuesto de ocupacion hotelera. Desde cuestiones de nexus hasta determinacion de ocupacion, protegemos sus ingresos.",
+    points: ["Determinacion de ocupacion", "Analisis de exenciones", "Defensa de recaudacion"],
   },
   {
     icon: Warehouse,
-    title: "Enterprise Zone Benefits",
-    desc: "Strategic guidance and audit defense for businesses utilizing Enterprise Zone tax incentives. Ensure proper documentation and maximum benefit preservation.",
-    points: ["Zone certification review", "Benefit documentation", "Audit representation"],
+    title: "Beneficios de zonas empresariales",
+    desc: "Asesoria estrategica y defensa de auditoria para empresas que utilizan incentivos fiscales de Enterprise Zone. Asegure documentacion adecuada y la preservacion de beneficios.",
+    points: ["Revision de certificacion", "Documentacion de beneficios", "Representacion en auditoria"],
   },
   {
     icon: ShoppingBag,
-    title: "Convenience Store Audits",
-    desc: "Targeted expertise for convenience store chains and independent operators. We navigate the complex taxability issues unique to retail fuel and merchandise sales.",
-    points: ["Fuel vs. merchandise", "Packaging classification", "Multi-location nexus"],
+    title: "Auditorias de tiendas de conveniencia",
+    desc: "Experiencia especifica para cadenas y operadores independientes. Navegamos los temas complejos de tributacion propios de ventas de combustible y mercancia.",
+    points: ["Combustible vs. mercancia", "Clasificacion de empaques", "Nexus multiubicacion"],
   },
   {
     icon: Wrench,
-    title: "Oil & Gas Services Tax",
-    desc: "Specialized audits and compliance support for oilfield service companies. We address the distinct tax classification and exemption questions in energy industries.",
-    points: ["Service classification", "Exemption documentation", "Audit negotiation"],
+    title: "Impuestos de servicios petroleros y gas",
+    desc: "Auditorias especializadas y apoyo de cumplimiento para empresas de servicios petroleros. Atendemos preguntas particulares de clasificacion fiscal y exenciones en industrias energeticas.",
+    points: ["Clasificacion de servicios", "Documentacion de exenciones", "Negociacion de auditorias"],
   },
   {
     icon: Factory,
-    title: "Manufacturing Tax Defense",
-    desc: "Defense for manufacturers facing sales tax audits. From component sourcing to equipment classification, we challenge complex audit determinations.",
-    points: ["Input tax analysis", "Equipment exemptions", "Material classification"],
+    title: "Defensa fiscal para manufactura",
+    desc: "Defensa para fabricantes frente a auditorias de impuesto sobre ventas. Desde origen de componentes hasta clasificacion de equipo, impugnamos determinaciones complejas.",
+    points: ["Analisis de impuestos de insumos", "Exenciones de equipo", "Clasificacion de materiales"],
   },
   {
     icon: Hammer,
-    title: "Construction & Contractor Audits",
-    desc: "Comprehensive representation for contractors, subcontractors, and construction companies. We defend against audits challenging labor, materials, and service classifications.",
-    points: ["Labor vs. materials", "Resale exemptions", "Subcontractor issues"],
+    title: "Auditorias de construccion y contratistas",
+    desc: "Representacion integral para contratistas, subcontratistas y empresas de construccion. Defendemos auditorias que cuestionan clasificaciones de mano de obra, materiales y servicios.",
+    points: ["Mano de obra vs. materiales", "Exenciones por reventa", "Temas de subcontratistas"],
   },
   {
     icon: TrendingDown,
-    title: "Refunds & Credits",
-    desc: "Proactive identification and recovery of overpaid sales taxes through amended returns and refund claims. We've recovered millions for clients on unclaimed exemptions and misclassifications.",
-    points: ["Overpayment recovery", "Amended returns", "Refund documentation"],
+    title: "Reembolsos y creditos",
+    desc: "Identificacion y recuperacion proactiva de impuestos pagados en exceso mediante declaraciones enmendadas y reclamaciones de reembolso. Hemos recuperado millones para clientes.",
+    points: ["Recuperacion de pagos en exceso", "Declaraciones enmendadas", "Documentacion de reembolsos"],
   },
 ];
 
@@ -393,16 +376,19 @@ function Services() {
   return (
     <section id="services" className="py-24 md:py-36 bg-background">
       <div className="container-x">
-        <SectionEyebrow number="01" label="Practice Areas" />
+        <SectionEyebrow number="01" label="Areas de practica" />
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-12 lg:gap-24 mb-16">
           <div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.05]">
-              A full-spectrum sales tax practice, built for Texas.
+              Una practica integral de impuesto sobre ventas, creada para Texas.
             </h2>
           </div>
           <div className="flex items-center">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              From standard sales tax to specialized audits in hospitality, energy, retail, and construction — we handle the full spectrum. Our expertise spans mixed beverage tax, hotel occupancy, enterprise zone benefits, and refund recovery. Every engagement is led by professionals who have sat on the auditor's side of the table.
+              Desde auditorias estandar hasta asuntos especializados en hospitalidad,
+              energia, comercio minorista y construccion, cubrimos todo el espectro.
+              Nuestra experiencia abarca bebidas mixtas, ocupacion hotelera, beneficios
+              de zonas empresariales y recuperacion de reembolsos.
             </p>
           </div>
         </div>
@@ -410,9 +396,7 @@ function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-sm overflow-hidden">
           {services.map((s, i) => {
             const Icon = s.icon;
-            return (
-              <ServiceCard key={s.title} service={s} index={i} Icon={Icon} />
-            );
+            return <ServiceCard key={s.title} service={s} index={i} Icon={Icon} />;
           })}
         </div>
       </div>
@@ -457,7 +441,6 @@ function ServiceCard({
   );
 }
 
-/* ---------------------- ABOUT ---------------------- */
 function About() {
   const ref = useReveal<HTMLDivElement>();
   return (
@@ -470,32 +453,32 @@ function About() {
               <span className="font-display text-xl text-brand-blue-light">02</span>
               <span className="h-px flex-1 max-w-16 bg-white/20" />
               <span className="text-[11px] tracking-[0.24em] uppercase text-white/60">
-                Our Firm
+                Nuestra firma
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
-              Former state auditors.
+              Ex auditores estatales.
               <br />
-              <span className="italic text-gradient-blue">Now on your side.</span>
+              <span className="italic text-gradient-blue">Ahora de su lado.</span>
             </h2>
           </div>
           <div className="space-y-6 text-white/75 leading-relaxed text-lg">
             <p>
-              SA Tax & Audit Consultants LLC was founded by veterans of the Texas Comptroller of Public
-              Accounts — sales tax auditors and supervisors who spent decades enforcing the
-              statute they now help clients navigate.
+              SA Tax & Audit Consultants LLC fue fundada por veteranos de la Contraloria de
+              Cuentas Publicas de Texas: auditores y supervisores de impuesto sobre ventas que
+              pasaron decadas aplicando la ley que hoy ayudan a sus clientes a navegar.
             </p>
             <p>
-              We understand how audits are selected, how sampling is constructed, how
-              assessments are calculated, and where the state's arguments are strongest — and
-              weakest. That institutional knowledge is the foundation of every engagement.
+              Entendemos como se seleccionan las auditorias, como se construyen los muestreos,
+              como se calculan las determinaciones y donde los argumentos del estado son mas
+              fuertes y mas debiles. Ese conocimiento institucional es la base de cada caso.
             </p>
             <div className="grid grid-cols-2 gap-6 pt-8 border-t border-white/10">
               {[
-                { k: "Confidential", v: "Every engagement, protected." },
-                { k: "Contingency", v: "Fee structures available." },
-                { k: "Statewide", v: "All 254 Texas counties." },
-                { k: "Responsive", v: "Direct partner access." },
+                { k: "Confidencial", v: "Cada asunto, protegido." },
+                { k: "Contingencia", v: "Estructuras de honorarios disponibles." },
+                { k: "Estatal", v: "Los 254 condados de Texas." },
+                { k: "Respuesta", v: "Acceso directo a socios." },
               ].map((b) => (
                 <div key={b.k}>
                   <div className="text-sm font-medium text-white">{b.k}</div>
@@ -510,28 +493,27 @@ function About() {
   );
 }
 
-/* ---------------------- INDUSTRIES ---------------------- */
 const industries = [
-  { icon: Building2, name: "Construction & Contractors" },
-  { icon: Factory, name: "Manufacturing & Fabrication" },
-  { icon: Truck, name: "Transportation & Logistics" },
-  { icon: Utensils, name: "Restaurants & Hospitality" },
-  { icon: Wrench, name: "Oilfield & Energy Services" },
-  { icon: ShoppingBag, name: "Retail & E-Commerce" },
+  { icon: Building2, name: "Construccion y contratistas" },
+  { icon: Factory, name: "Manufactura y fabricacion" },
+  { icon: Truck, name: "Transporte y logistica" },
+  { icon: Utensils, name: "Restaurantes y hospitalidad" },
+  { icon: Wrench, name: "Servicios petroleros y energia" },
+  { icon: ShoppingBag, name: "Comercio minorista y e-commerce" },
 ];
 
 function Industries() {
   return (
     <section id="industries" className="py-24 md:py-36 bg-background">
       <div className="container-x">
-        <SectionEyebrow number="03" label="Industries Served" />
+        <SectionEyebrow number="03" label="Industrias atendidas" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.05]">
-            Sector-specific expertise across the Texas economy.
+            Experiencia especifica por sector en toda la economia de Texas.
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed self-end">
-            Sales tax exposure is industry-specific. We bring focused expertise to the sectors
-            most frequently audited by the Comptroller.
+            La exposicion al impuesto sobre ventas es diferente en cada industria. Aportamos
+            experiencia enfocada a los sectores auditados con mayor frecuencia por la Contraloria.
           </p>
         </div>
 
@@ -573,28 +555,26 @@ function IndustryCard({
   );
 }
 
-
-/* ---------------------- FAQ ---------------------- */
 const faqs = [
   {
-    q: "When should I contact a sales tax consultant?",
-    a: "The best time is before an audit begins — a proactive compliance review can identify and remediate exposure on your terms. If you've already received an audit notice, contact us immediately so we can attend the opening conference and manage records requests from day one.",
+    q: "Cuando debo contactar a un consultor de impuesto sobre ventas?",
+    a: "El mejor momento es antes de que inicie una auditoria. Una revision proactiva de cumplimiento puede identificar y corregir exposicion en sus propios terminos. Si ya recibio un aviso de auditoria, contactenos de inmediato.",
   },
   {
-    q: "How is your firm different from a CPA or tax attorney?",
-    a: "Our team has worked inside the Texas Comptroller of Public Accounts as sales tax auditors and supervisors. Sales tax is our sole focus — not one service line among many. That specialization, combined with insider procedural knowledge, produces materially different outcomes.",
+    q: "En que se diferencia su firma de un CPA o abogado fiscal?",
+    a: "Nuestro equipo trabajo dentro de la Contraloria de Cuentas Publicas de Texas como auditores y supervisores de impuesto sobre ventas. El impuesto sobre ventas es nuestro unico enfoque, no una linea de servicio entre muchas.",
   },
   {
-    q: "Do you handle audits statewide?",
-    a: "Yes. We represent clients across all 254 Texas counties, including audits managed out of Austin, Houston, Dallas, San Antonio, and Comptroller field offices statewide.",
+    q: "Atienden auditorias en todo el estado?",
+    a: "Si. Representamos clientes en los 254 condados de Texas, incluidas auditorias administradas desde Austin, Houston, Dallas, San Antonio y oficinas regionales de la Contraloria.",
   },
   {
-    q: "What does an engagement typically cost?",
-    a: "Fee structures depend on the engagement. Initial consultations are complimentary and fully confidential. We can gladly meet at your place of business.",
+    q: "Cuanto suele costar un caso?",
+    a: "La estructura de honorarios depende del asunto. Las consultas iniciales son gratuitas y totalmente confidenciales. Tambien podemos reunirnos en su lugar de negocio.",
   },
   {
-    q: "Can you help after an assessment has been issued?",
-    a: "Absolutely. We routinely file requests for redetermination, prepare statements of grounds, and represent clients through the Comptroller's administrative hearings process — up to and including settlement negotiations with hearings attorneys.",
+    q: "Pueden ayudar despues de que se emita una determinacion?",
+    a: "Absolutamente. Presentamos solicitudes de redeterminacion, preparamos fundamentos y representamos clientes en el proceso administrativo de audiencias de la Contraloria, incluso en negociaciones de acuerdo.",
   },
 ];
 
@@ -602,15 +582,15 @@ function FAQ() {
   return (
     <section id="faq" className="py-24 md:py-36 bg-background">
       <div className="container-x">
-        <SectionEyebrow number="05" label="Frequently Asked" />
+        <SectionEyebrow number="05" label="Preguntas frecuentes" />
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-12 lg:gap-24">
           <div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.05]">
-              Answers before you need them.
+              Respuestas antes de que las necesite.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Common questions from business owners, CFOs, and controllers facing a Texas sales
-              tax matter.
+              Preguntas comunes de propietarios, CFOs y controllers ante un asunto de
+              impuesto sobre ventas en Texas.
             </p>
           </div>
           <Accordion
@@ -649,7 +629,6 @@ function FAQ() {
   );
 }
 
-/* ---------------------- CONTACT ---------------------- */
 function Contact() {
   const [submitting, setSubmitting] = useState(false);
   const ref = useReveal<HTMLDivElement>();
@@ -657,10 +636,10 @@ function Contact() {
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
-    
+
     const form = e.currentTarget as HTMLFormElement;
     const formData = new FormData(form);
-    
+
     try {
       const response = await fetch("https://formspree.io/f/mbdnpjzz", {
         method: "POST",
@@ -669,27 +648,28 @@ function Contact() {
           Accept: "application/json",
         },
       });
-      
-      const payload = await response.json().catch(() => ({} as any));
+
+      const payload = await response.json().catch(() => ({} as object));
 
       if (response.ok) {
         form.reset();
-        toast.success("Message received", {
-          description: "A partner will contact you within one business day.",
+        toast.success("Mensaje recibido", {
+          description: "Un socio se comunicara con usted dentro de un dia habil.",
         });
-        // Redirect to local thank-you page if available, otherwise fall back to Formspree's next
-        const next = (payload && payload.next) ? payload.next : "/thanks";
-        // If payload.next is an absolute or Formspree path, prefer local /thanks
+        const next =
+          payload && typeof payload === "object" && "next" in payload
+            ? payload.next
+            : "/thanks";
         window.location.href = next === "/thanks" ? "/thanks" : "/thanks";
       } else {
-        toast.error("Failed to send message", {
-          description: "Please try again or contact us directly.",
+        toast.error("No se pudo enviar el mensaje", {
+          description: "Intente de nuevo o comuniquese directamente con nosotros.",
         });
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      toast.error("Failed to send message", {
-        description: "Please try again or contact us directly.",
+      toast.error("No se pudo enviar el mensaje", {
+        description: "Intente de nuevo o comuniquese directamente con nosotros.",
       });
     } finally {
       setSubmitting(false);
@@ -706,22 +686,22 @@ function Contact() {
               <span className="font-display text-xl text-brand-blue-light">06</span>
               <span className="h-px flex-1 max-w-16 bg-white/20" />
               <span className="text-[11px] tracking-[0.24em] uppercase text-white/60">
-                Request Consultation
+                Solicitar consulta
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
-              Start with a confidential conversation.
+              Comience con una conversacion confidencial.
             </h2>
             <p className="mt-6 text-white/70 leading-relaxed max-w-md">
-              Every inquiry is reviewed by a partner. All communications are protected and
-              privileged.
+              Cada consulta es revisada por un socio. Todas las comunicaciones estan
+              protegidas y son confidenciales.
             </p>
 
             <div className="mt-12 space-y-6 border-t border-white/10 pt-10">
               <div className="flex items-start gap-4">
                 <Mail className="h-5 w-5 text-brand-blue-light mt-0.5 shrink-0" />
                 <div>
-                  <div className="text-sm text-white/50 uppercase tracking-wider">Email</div>
+                  <div className="text-sm text-white/50 uppercase tracking-wider">Correo</div>
                   <a href="mailto:info@sataxdefense.com" className="text-white hover:text-brand-blue-light transition-colors">
                     info@sataxdefense.com
                   </a>
@@ -730,7 +710,7 @@ function Contact() {
               <div className="flex items-start gap-4">
                 <Phone className="h-5 w-5 text-brand-blue-light mt-0.5 shrink-0" />
                 <div>
-                  <div className="text-sm text-white/50 uppercase tracking-wider">Phone</div>
+                  <div className="text-sm text-white/50 uppercase tracking-wider">Telefono</div>
                   <a href="tel:+12108603614" className="text-white hover:text-brand-blue-light transition-colors">
                     (210) 860-3614
                   </a>
@@ -739,8 +719,8 @@ function Contact() {
               <div className="flex items-start gap-4">
                 <MapPin className="h-5 w-5 text-brand-blue-light mt-0.5 shrink-0" />
                 <div>
-                  <div className="text-sm text-white/50 uppercase tracking-wider">Office</div>
-                  <div className="text-white">San Antonio, Texas · Statewide representation</div>
+                  <div className="text-sm text-white/50 uppercase tracking-wider">Oficina</div>
+                  <div className="text-white">San Antonio, Texas · Representacion estatal</div>
                 </div>
               </div>
             </div>
@@ -751,16 +731,16 @@ function Contact() {
             className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-sm p-6 md:p-10 space-y-6"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Field label="Full name" name="name" required />
-              <Field label="Company" name="company" required />
+              <Field label="Nombre completo" name="name" required />
+              <Field label="Empresa" name="company" required />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Field label="Email" name="email" type="email" required />
-              <Field label="Phone" name="phone" type="tel" />
+              <Field label="Correo electronico" name="email" type="email" required />
+              <Field label="Telefono" name="phone" type="tel" />
             </div>
             <div>
               <label className="block text-xs uppercase tracking-[0.2em] text-white/60 mb-3">
-                Matter type
+                Tipo de asunto
               </label>
               <select
                 name="matter"
@@ -768,24 +748,24 @@ function Contact() {
                 defaultValue=""
                 className="w-full bg-transparent border-b border-white/20 pb-3 text-white focus:outline-none focus:border-brand-blue-light transition-colors [&>option]:bg-navy-deep [&>option]:text-white"
               >
-                <option value="" disabled>Select a practice area…</option>
-                <option>Active audit defense</option>
-                <option>Administrative appeal / hearing</option>
-                <option>Compliance review</option>
-                <option>Refund analysis</option>
-                <option>Other</option>
+                <option value="" disabled>Seleccione un area de practica…</option>
+                <option>Defensa de auditoria activa</option>
+                <option>Apelacion administrativa / audiencia</option>
+                <option>Revision de cumplimiento</option>
+                <option>Analisis de reembolso</option>
+                <option>Otro</option>
               </select>
             </div>
             <div>
               <label className="block text-xs uppercase tracking-[0.2em] text-white/60 mb-3">
-                Brief description
+                Descripcion breve
               </label>
               <textarea
                 name="message"
                 rows={4}
                 required
                 className="w-full bg-transparent border-b border-white/20 pb-3 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-blue-light transition-colors resize-none"
-                placeholder="Tell us about your situation…"
+                placeholder="Cuentenos sobre su situacion…"
               />
             </div>
             <button
@@ -793,11 +773,11 @@ function Contact() {
               disabled={submitting}
               className="w-full inline-flex items-center justify-center gap-3 rounded-sm bg-white px-6 py-4 text-sm font-medium text-navy-deep hover:bg-brand-blue-light transition-colors disabled:opacity-60"
             >
-              {submitting ? "Sending…" : "Send confidential inquiry"}
+              {submitting ? "Enviando…" : "Enviar consulta confidencial"}
               {!submitting && <ArrowRight className="h-4 w-4" />}
             </button>
             <p className="text-xs text-white/50 text-center">
-              Your information is kept strictly confidential.
+              Su informacion se mantiene estrictamente confidencial.
             </p>
           </form>
         </div>
@@ -833,13 +813,12 @@ function Field({
   );
 }
 
-/* ---------------------- FOOTER ---------------------- */
 function Footer() {
   return (
     <footer className="bg-background border-t border-border py-12">
       <div className="container-x grid grid-cols-[minmax(0,1fr)_auto] items-center gap-6 sm:flex sm:justify-between">
         <div className="text-sm text-muted-foreground truncate">
-          © {new Date().getFullYear()} SA Tax & Audit Consultants LLC · All rights reserved.
+          © {new Date().getFullYear()} SA Tax & Audit Consultants LLC · Todos los derechos reservados.
         </div>
         <div className="text-xs text-muted-foreground tracking-wider uppercase shrink-0">
           San Antonio · Texas
@@ -848,15 +827,18 @@ function Footer() {
 
       <div className="container-x mt-6">
         <p className="text-[11px] text-muted-foreground leading-snug">
-          Consultant does not guarantee any audit outcome, assessment, settlement, refund, or penalty or interest reduction; opinions expressed are professional judgments, not guarantees, and outcomes depend on the accuracy of Client&apos;s records, the Comptroller&apos;s determinations, and the hours funded. Scope &amp; Changing Laws: advice is based solely on facts Client provides and the law in effect at the time of engagement; Consultant need not update its advice for later changes in law, policy, or facts. Prior State Employment: Consultant&apos;s marketing may reference personnel&apos;s prior employment with the Texas Comptroller; this creates no special relationship, influence, or guaranteed outcome
+          El consultor no garantiza ningun resultado de auditoria, determinacion, acuerdo,
+          reembolso ni reduccion de multas o intereses; las opiniones expresadas son juicios
+          profesionales y no garantias. Los resultados dependen de la exactitud de los
+          registros del cliente, de las determinaciones de la Contraloria y de las horas
+          financiadas.
         </p>
       </div>
     </footer>
   );
 }
 
-/* ---------------------- PAGE ---------------------- */
-function Landing() {
+function SpanishLanding() {
   return (
     <main className="bg-background text-foreground overflow-x-hidden">
       <Hero />
