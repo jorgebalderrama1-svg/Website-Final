@@ -218,25 +218,25 @@ function Hero() {
           <div className="reveal reveal-delay-1 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-blue-light animate-pulse" />
             <span className="text-[11px] tracking-[0.2em] uppercase text-white/80">
-              Led by former Texas Comptroller auditors
+              Dirigido por ex auditores de la Texas Comptroller
             </span>
           </div>
 
           <h1 className="reveal reveal-delay-2 mt-8 text-[42px] leading-[1.02] sm:text-6xl md:text-7xl lg:text-[88px] text-white">
-            Texas sales tax,
+            Impuesto sobre ventas de Texas,
             <br />
-            <span className="italic text-gradient-blue">defended with precision.</span>
+            <span className="italic text-gradient-blue">defendido con precision.</span>
           </h1>
 
           <p className="reveal reveal-delay-3 mt-8 max-w-2xl text-base md:text-lg text-white/70 leading-relaxed">
-            SA Tax & Audit Consultants LLC helps Texas businesses with sales tax audits,
-            appeals, and compliance reviews. Our team includes former Texas Comptroller
-            auditors and supervisors who know the process from the inside and use that
-            experience to lower exposure and protect operations.
+            SA Tax & Audit Consultants LLC ayuda a empresas de Texas con auditorias de
+            sales tax, apelaciones y revisiones de cumplimiento. Nuestro equipo incluye ex
+            auditores y supervisores de la Texas Comptroller que conocen el proceso desde
+            adentro y lo usan para reducir la exposicion y proteger las operaciones.
           </p>
 
           <div className="mt-4 text-white font-semibold">
-            Proudly based in San Antonio. Local, approachable support for Texas businesses.
+            Con orgullo en San Antonio. Apoyo local y directo para empresas de Texas.
           </div>
         </div>
 
@@ -246,14 +246,14 @@ function Hero() {
               href="#contact"
               className="group inline-flex items-center gap-3 rounded-sm bg-white px-6 py-3.5 text-sm font-medium text-navy-deep hover:bg-brand-blue-light transition-colors"
             >
-              Schedule a free consultation
+              Agendar una consulta gratis
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#services"
               className="inline-flex items-center gap-2 px-2 py-3.5 text-sm text-white/90 hover:text-white transition-colors border-b border-white/30 hover:border-white"
             >
-              Explore our practice
+              Explorar nuestra practica
             </a>
           </div>
 
