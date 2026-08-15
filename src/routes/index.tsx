@@ -152,7 +152,7 @@ function Nav() {
             href="/espanol"
             className="inline-flex items-center gap-2 rounded-sm bg-brand-blue px-3 py-2.5 text-sm text-white hover:bg-navy transition-colors"
           >
-            Espanol
+            Español
           </a>
 
           <a
